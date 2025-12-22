@@ -6,6 +6,7 @@ A modular Neovim setup using Lua and lazy.nvim for plugin management.
 
 ```
 ~/.config/nvim/
+├── lsp
 ├── init.lua
 └── lua/
     └── config/
