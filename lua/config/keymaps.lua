@@ -5,6 +5,15 @@ vim.keymap.set('n','<leader>e','<Cmd>NvimTreeToggle<CR>',{ desc='Open File-Explo
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 
+--WINDOW_MANAGEMENT
+vim.keymap.set('n', '<leader>wl', '<Cmd>wincmd l<CR>', { desc = 'Focus Right Window' })
+vim.keymap.set('n', '<leader>wj', '<Cmd>wincmd j<CR>', { desc = 'Focus Left Window' })
+vim.keymap.set('n', '<leader>wk', '<Cmd>wincmd k<CR>', { desc = 'Focus Upper Window' })
+vim.keymap.set('n', '<leader>wh', '<Cmd>wincmd h<CR>', { desc = 'Focus Lower Window' })
+vim.keymap.set('n', '<leader>wv', '<Cmd>vsplit<CR>', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>ws', '<Cmd>split<CR>', { desc = 'Splite window horizontally' })
+
+
 -- TELESCOPE
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.git_files, { desc = 'Telescope find git files' })
@@ -18,3 +27,7 @@ vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = 'Telescope buffers
 --LAZYGIT
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open LazyGit' })
 
+
+--BUFFERLINE
+vim.keymap.set('n', '<Tab>', '<cmd>BufferLineCycleNext<CR>', { desc = 'Change focus to next tab' })
+vim.keymap.set('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', { desc = 'Change focus to prev tab' })
