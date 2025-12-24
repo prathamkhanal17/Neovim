@@ -26,7 +26,6 @@ vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
--- vim.opt.colorcolumn = "100"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.pumheight = 10
@@ -83,32 +82,32 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- =========================
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = "» ",
-  trail = "·",
-  nbsp = "␣",
+	tab = "» ",
+	trail = "·",
+	nbsp = "␣",
 }
 
 -- =========================
 -- Disable some built-ins (faster startup)
 -- =========================
 local disabled_built_ins = {
-  "gzip",
-  "zip",
-  "zipPlugin",
-  "tar",
-  "tarPlugin",
-  "getscript",
-  "getscriptPlugin",
-  "vimball",
-  "vimballPlugin",
-  "matchit",
-  "matchparen",
-  "netrw",
-  "netrwPlugin",
-  "netrwSettings",
-  "netrwFileHandlers",
+	"gzip",
+	"zip",
+	"zipPlugin",
+	"tar",
+	"tarPlugin",
+	"getscript",
+	"getscriptPlugin",
+	"vimball",
+	"vimballPlugin",
+	"matchit",
+	"matchparen",
+	"netrw",
+	"netrwPlugin",
+	"netrwSettings",
+	"netrwFileHandlers",
 }
 
 for _, plugin in ipairs(disabled_built_ins) do
-  vim.g["loaded_" .. plugin] = 1
+	vim.g["loaded_" .. plugin] = 1
 end

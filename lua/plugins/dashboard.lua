@@ -33,12 +33,12 @@ return {
 						icon = " ",
 						key = "g",
 					},
-					{
-						action = "Telescope projects",
-						desc = " Projects",
-						icon = " ",
-						key = "p",
-					},
+					-- {
+					-- 	action = "Telescope projects",
+					-- 	desc = " Projects",
+					-- 	icon = " ",
+					-- 	key = "p",
+					-- },
 					{
 						action = "Mason",
 						desc = " Mason",
