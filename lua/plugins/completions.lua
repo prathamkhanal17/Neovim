@@ -4,7 +4,7 @@ return {
     dependencies = {
         "rafamadriz/friendly-snippets",  -- Good snippet collection
     },
-    lazy = false,  -- Load early for completion
+    event = "InsertEnter",
     opts = {
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },

@@ -6,15 +6,20 @@ A modular Neovim setup using Lua and lazy.nvim for plugin management.
 
 ```
 ~/.config/nvim/
-├── lsp
 ├── init.lua
-└── lua/
-    └── config/
-        ├── options.lua
-        ├── autocmds.lua
-        ├── lazy.lua
-        ├── transparency.lua
-        └── keymaps.lua
+├── lua/
+│   ├── config/
+│   │   ├── options.lua
+│   │   ├── keymaps.lua
+│   │   ├── autocmds.lua
+│   │   ├── lazy.lua
+│   │   ├── transparency.lua
+│   │   └── lsp.lua
+│   └── plugins/
+│       ├── lsp.lua
+│       ├── telescope.lua
+│       └── ...
+└── README.md
 ```
 
 ## Modules
@@ -23,9 +28,11 @@ The configuration is split into focused modules:
 
 - `options.lua` - Editor settings and behaviors
 - `autocmds.lua` - Autocommands for automation
-- `lazy.lua` - Plugin manager and plugin definitions
+- `lazy.lua` - Plugin manager setup
 - `transparency.lua` - UI transparency settings
 - `keymaps.lua` - Custom key mappings
+- `lsp.lua` - LSP-specific configuration
+- `plugins/` - Modular plugin specifications
 
 ## Installation
 
