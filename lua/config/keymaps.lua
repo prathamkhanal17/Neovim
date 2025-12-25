@@ -47,25 +47,3 @@ vim.keymap.set("n", "<leader>cd", function()
 		vim.diagnostic.config({ virtual_lines = { current_line = true } })
 	end
 end, {})
-
--- Accept full suggestion
-vim.keymap.set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
-	expr = true,
-	replace_keycodes = false,
-	silent = true,
-})
-
--- Accept next word
-vim.keymap.set("i", "<C-L>", "<Plug>(copilot-accept-word)", { silent = true })
-
--- Dismiss suggestion
-vim.keymap.set("i", "<C-]>", "<Plug>(copilot-dismiss)", { silent = true })
-
--- Next suggestion
-vim.keymap.set("i", "<M-]>", "<Plug>(copilot-next)", { silent = true })
-
--- Previous suggestion
-vim.keymap.set("i", "<M-[>", "<Plug>(copilot-previous)", { silent = true })
-
--- Disable Copilot <Tab> mapping
-vim.g.copilot_no_tab_map = true
