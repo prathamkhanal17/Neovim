@@ -36,3 +36,12 @@ vim.api.nvim_set_hl(0, "NotifyERRORBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { bg = "none" })
+
+local bg = "#1C2021"
+local set = vim.api.nvim_set_hl
+
+-- Base windows
+set(0, "Normal", { bg = bg })
+set(0, "NormalFloat", { bg = bg })
+set(0, "SignColumn", { bg = bg })
+set(0, "EndOfBuffer", { bg = bg })

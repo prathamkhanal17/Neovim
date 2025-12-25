@@ -28,3 +28,12 @@ vim.keymap.set("n", "<leader>ht", "<Cmd>Gitsigns toggle_current_line_blame<Cr>",
 vim.keymap.set("n", "<leader>hp", "<Cmd>Gitsigns preview_hunk_inline<CR>", { desc = "Search and Replace" })
 vim.keymap.set("n", "<leader>gb", "<Cmd>Telescope git_branches<CR>", { desc = "Search and Replace" })
 vim.keymap.set("n", "<leader>gd", "<Cmd>Telescope git_status<CR>", { desc = "Search and Replace" })
+
+--LSP
+vim.keymap.set("n", "<leader>cd", function()
+	if vim.diagnostic.config().virtual_lines then
+		vim.diagnostic.config({ virtual_lines = false })
+	else
+		vim.diagnostic.config({ virtual_lines = { current_line = true } })
+	end
+end, {})
