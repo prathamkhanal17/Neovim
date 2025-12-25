@@ -1,0 +1,50 @@
+return {
+	"xiyaowong/transparent.nvim",
+	lazy = false,
+	config = function()
+		require("transparent").setup({
+			groups = { -- default groups to clear
+				"Normal",
+				"NormalNC",
+				"Comment",
+				"Constant",
+				"Special",
+				"Identifier",
+				"Statement",
+				"PreProc",
+				"Type",
+				"Underlined",
+				"Todo",
+				"String",
+				"Function",
+				"Conditional",
+				"Repeat",
+				"Operator",
+				"Structure",
+				"LineNr",
+				"NonText",
+				"SignColumn",
+				"CursorLineNr",
+				"EndOfBuffer",
+			},
+			extra_groups = { -- add plugin-specific ones you need
+				"NormalFloat",
+				"FloatBorder",
+				"Pmenu",
+				"NvimTreeNormal",
+				"NvimTreeEndOfBuffer",
+				"NvimTreeVertSplit",
+				"TelescopeNormal",
+				"TelescopeBorder",
+				"TelescopePromptBorder",
+				-- Notify groups (if still solid)
+				"NotifyINFOBody",
+				"NotifyERRORBody",
+				"NotifyWARNBody",
+				"NotifyTRACEBody",
+				"NotifyDEBUGBody",
+				-- Add more if needed (e.g., WhichKeyFloat)
+			},
+		})
+	end,
+}
