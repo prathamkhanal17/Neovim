@@ -1,5 +1,15 @@
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Remapping jk for Escape" })
-
+vim.keymap.set("n", "<leader>uw", function()
+	if vim.wo.wrap then
+		vim.wo.wrap = false
+		vim.wo.linebreak = false
+		print("Wrap: OFF")
+	else
+		vim.wo.wrap = true
+		vim.wo.linebreak = true
+		print("Wrap: ON")
+	end
+end, { desc = "Toggle Line Wrap" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 vim.keymap.set("n", "<leader>q", "<Cmd>q<CR>", { desc = "Clear search highlight" })
 
@@ -17,7 +27,7 @@ vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
 --BUFFERLINE
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Change focus to next tab" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Change focus to prev tab" })
-
+vim.keymap.set("n", "<leader>bn", ":enew<CR>", { desc = "New Buffer (current window)" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close other buffers" })
 
 --SEARCH AND REPLACE
