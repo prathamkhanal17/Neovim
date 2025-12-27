@@ -13,6 +13,9 @@ end, { desc = "Toggle Line Wrap" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 vim.keymap.set("n", "<leader>q", "<Cmd>q<CR>", { desc = "Clear search highlight" })
 
+--KEYMAPS
+vim.keymap.set("n", "<leader>n", "<cmd>Notifications<cr>", { desc = "Notification history" })
+
 --WINDOW_MANAGEMENT
 vim.keymap.set("n", "<leader>wl", "<Cmd>wincmd l<CR>", { desc = "Focus Right Window" })
 vim.keymap.set("n", "<leader>wj", "<Cmd>wincmd j<CR>", { desc = "Focus Left Window" })
